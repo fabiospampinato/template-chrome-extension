@@ -7,7 +7,8 @@ import * as pify from 'pify';
 
 async function filesInDirectory ( directory: DirectoryEntry ) {
 
-  const entries = await pify ( directory.createReader ().readEntries )(),
+  const reader = directory.createReader (),
+        entries = await pify ( reader.readEntries.bind ( reader ) )(),
         entriesFiltered = entries.filter ( entry => entry.name[0] !== '.' ),
         filesPromises = entriesFiltered.map ( entry => entry.isDirectory ? filesInDirectory ( entry ) : entry.file () ),
         files = await Promise.all<any> ( filesPromises );

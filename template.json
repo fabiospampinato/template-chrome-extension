@@ -1,0 +1,8 @@
+{
+  "variablesOrder": ["name", "displayName", "description", "version", "author"],
+  "variables": {
+    "version": {
+      "default": "1.0.0"
+    }
+  }
+}

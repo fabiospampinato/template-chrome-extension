@@ -17,7 +17,7 @@ const ENVIRONMENT = process.env.NODE_ENV || 'development',
 /* CONFIG */
 
 const config = {
-  devtool: DEVELOPMENT ? 'cheap-module-source-map' : false,
+  // devtool: DEVELOPMENT ? 'cheap-module-source-map' : false,
   entry: {
     background: path.join ( __dirname, 'src/background/index.ts' ),
     options: path.join ( __dirname, 'src/options/index.tsx' ),

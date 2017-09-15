@@ -78,7 +78,7 @@ const config = {
     }),
     new SummaryPlugin ({
       normal: chalk.yellow ( '[{entry.name}] Bundled into "{entry.asset}" ({entry.size.MB}MB) in {time.s}s. {stats.warnings.length} warning(s).' ),
-      watching: ''
+      watching: 'Bundle rebuilt in {time.s}s.'
     })
   ],
   stats: {

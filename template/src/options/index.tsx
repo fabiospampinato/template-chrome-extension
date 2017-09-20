@@ -2,9 +2,9 @@
 /* IMPORT */
 
 import * as React from 'react';
-import {render} from "react-dom";
-import Options from "./components/options";
-import "./index.scss";
+import {render} from 'react-dom';
+import Options from './components/options';
+import './index.scss';
 
 /* RENDER */
 

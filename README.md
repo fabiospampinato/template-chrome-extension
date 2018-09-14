@@ -6,7 +6,7 @@ A template for starting a new Chrome extension quickly.
 
 Install the template locally with:
 
-```
+```sh
 template install fabiospampinato/template-chrome-extension chrome-extension
 ```
 
@@ -14,7 +14,7 @@ template install fabiospampinato/template-chrome-extension chrome-extension
 
 Create a new Chrome extension with:
 
-```
+```sh
 template create chrome-extension my-chrome-extension
 ```
 

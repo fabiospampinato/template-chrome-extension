@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@types/chrome": "0.0.48",
+    "@types/react": "^16.4.13",
+    "@types/react-dom": "^16.0.7",
     "awesome-typescript-loader": "^3.0.8",
     "chalk": "^2.1.0",
     "copy-webpack-plugin": "^4.0.1",

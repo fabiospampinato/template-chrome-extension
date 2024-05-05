@@ -79,7 +79,7 @@ const postinstall = async variables => {
   }
 
   await fs.writeFile ( path.join ( process.cwd (), 'manifest.json' ), JSON.stringify ( manifest, null, 2 ) );
-  await fs.writeFile ( path.join ( process.cwd (), 'manifest.json' ), viteTS );
+  await fs.writeFile ( path.join ( process.cwd (), 'vite.ts' ), viteTS );
 
 };
 

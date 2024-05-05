@@ -17,7 +17,7 @@ template install fabiospampinato/template-chrome-extension chrome-extension
 Create a new Chrome extension with:
 
 ```sh
-template create chrome-extension my-chrome-extension
+template create chrome-extension my-extension
 ```
 
 ## License

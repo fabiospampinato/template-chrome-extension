@@ -1,40 +1,30 @@
 {
+  "private": true,
   "name": "{{name}}",
+  "repository": "github:{{owner}}/{{name}}",
   "description": "{{description}}",
   "version": "{{version}}",
+  "type": "module",
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "npm run clean && webpack",
-    "build:watch": "npm run clean && webpack --watch",
-    "prod": "NODE_ENV=production npm-run-all clean -p icons:resize build",
-    "icons:resize": "cd resources/icon && convert icon.png -resize 16x16 icon-16.png && convert icon.png -resize 32x32 icon-32.png && convert icon.png -resize 48x48 icon-48.png && convert icon.png -resize 64x64 icon-64.png && convert icon.png -resize 128x128 icon-128.png && convert icon.png -resize 256x256 icon-256.png",
-    "tiles:resize": "cd resources/tiles && convert tile.png -resize 1400x560^ -gravity center -extent 1400x560 tile-1400x560.png && convert tile.png -resize 920x680^ -gravity center -extent 920x680 tile-920x680.png && convert tile.png -resize 440x280^ -gravity center -extent 440x280 tile-440x280.png"
+    "clean": "tsex clean",
+    "build:dev": "vite build --config vite.ts --mode development --watch",
+    "build:prod": "vite build --config vite.ts --mode production",
+    "build:icons": "cd resources/icon && convert icon.png -resize 16x16 icon-16.png && convert icon.png -resize 32x32 icon-32.png && convert icon.png -resize 48x48 icon-48.png && convert icon.png -resize 64x64 icon-64.png && convert icon.png -resize 128x128 icon-128.png && convert icon.png -resize 256x256 icon-256.png",
+    "build:tiles": "cd resources/tiles && convert tile.png -resize 1400x560^ -gravity center -extent 1400x560 tile-1400x560.png && convert tile.png -resize 920x680^ -gravity center -extent 920x680 tile-920x680.png && convert tile.png -resize 440x280^ -gravity center -extent 440x280 tile-440x280.png",
+    "dev": "npm run clean && npm run build:dev",
+    "prod": "npm run clean && npm run build:prod"
   },
-  "license": "MIT",
-  "author": "{{author}}",
   "dependencies": {
-    "@types/chrome": "0.0.48",
-    "@types/react": "^16.4.13",
-    "@types/react-dom": "^16.0.7",
-    "pify": "^3.0.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "chrome-extension-livereload": "^1.0.0",
+    "oby": "^15.1.2",
+    "voby": "^0.58.1"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^3.0.8",
-    "chalk": "^2.1.0",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.7",
-    "file-loader": "^0.11.2",
-    "html-loader": "^0.5.1",
-    "html-webpack-plugin": "^2.30.1",
-    "node-sass": "^4.5.0",
-    "npm-run-all": "^4.1.1",
-    "rimraf": "^2.6.2",
-    "sass-loader": "^6.0.2",
-    "style-loader": "^0.18.2",
-    "typescript": "^3.0.3",
-    "webpack": "^3.5.6",
-    "webpack-summary": "^1.1.0"
+    "@types/chrome": "^0.0.267",
+    "tsex": "^3.2.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vite-plugin-static-copy": "^1.0.4",
+    "voby-vite": "^1.2.5"
   }
 }

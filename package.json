@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "template-chrome-extension",
+  "type": "module"
+}

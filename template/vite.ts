@@ -31,8 +31,9 @@ const config = defineConfig ({
     voby (),
     {
       name: 'copy:assets',
-      async buildEnd () {
-        await fs.cp ( 'resources', 'dist/resources', { recursive: true } );
+      buildEnd: async () => {
+        await fs.mkdir ( 'dist/resources/icon', { recursive: true } );
+        await fs.cp ( 'resources/icon', 'dist/resources/icon', { recursive: true } );
         await fs.cp ( 'manifest.json', 'dist/manifest.json' );
       }
     }

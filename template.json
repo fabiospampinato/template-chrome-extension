@@ -18,6 +18,34 @@
     },
     "owner": {
       "type": "string"
+    },
+    "hasBackground": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasContent": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasDevtools": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasNewtab": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasOptions": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasPopup": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasSidepanel": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

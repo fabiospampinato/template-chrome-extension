@@ -1,8 +1,8 @@
 
 /* IMPORT */
 
+import fs from 'node:fs/promises';
 import {defineConfig} from 'vite';
-import {viteStaticCopy} from 'vite-plugin-static-copy';
 import voby from 'voby-vite';
 import manifest from './manifest.json';
 
@@ -29,18 +29,13 @@ const config = defineConfig ({
   },
   plugins: [
     voby (),
-    viteStaticCopy ({
-      targets: [
-        {
-          src: './resources',
-          dest: '.'
-        },
-        {
-          src: './manifest.json',
-          dest: '.'
-        }
-      ]
-    })
+    {
+      name: 'copy:assets',
+      async buildEnd () {
+        await fs.cp ( 'resources', 'dist/resources', { recursive: true } );
+        await fs.cp ( 'manifest.json', 'dist/manifest.json' );
+      }
+    }
   ]
 });
 

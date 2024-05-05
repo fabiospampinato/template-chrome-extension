@@ -21,10 +21,10 @@
   },
   "devDependencies": {
     "@types/chrome": "^0.0.267",
+    "@types/node": "^20.12.8",
     "tsex": "^3.2.1",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
-    "vite-plugin-static-copy": "^1.0.4",
     "voby-vite": "^1.2.5"
   }
 }

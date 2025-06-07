@@ -3,6 +3,7 @@
   "name": "{{name}}",
   "repository": "github:{{owner}}/{{name}}",
   "description": "{{description}}",
+  "license": "MIT",
   "version": "{{version}}",
   "type": "module",
   "scripts": {

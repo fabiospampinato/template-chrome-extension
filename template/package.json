@@ -21,11 +21,11 @@
     "voby": "^0.58.1"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.267",
-    "@types/node": "^20.12.8",
-    "tsex": "^3.2.1",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.11",
+    "@types/chrome": "^0.0.326",
+    "@types/node": "^18.16.3",
+    "tsex": "^4.0.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
     "voby-vite": "^1.2.5"
   }
 }

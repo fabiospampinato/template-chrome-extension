@@ -13,7 +13,7 @@ const config = defineConfig ({
     minify: false,
     rollupOptions: {
       input: {
-        background: manifest.background.page,
+        background: './src/background/worker.ts',
         contentAll: manifest.content_scripts[0].ts[0],
         devtools: manifest.devtools_page,
         options: manifest.options_page,

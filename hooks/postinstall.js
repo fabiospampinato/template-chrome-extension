@@ -19,15 +19,6 @@ const postinstall = async variables => {
 
   }
 
-  if ( !variables.hasBackground ) {
-
-    await fs.rm ( path.join ( process.cwd (), 'src', 'background' ), { recursive: true } );
-
-    manifest.background = undefined;
-    viteTS = viteTS.replace ( /^\s*background:.*\n/gm, '' );
-
-  }
-
   if ( !variables.hasContent ) {
 
     await fs.rm ( path.join ( process.cwd (), 'src', 'content' ), { recursive: true } );
@@ -88,6 +79,15 @@ const postinstall = async variables => {
 
     manifest.side_panel = undefined;
     viteTS = viteTS.replace ( /^\s*sidepanel:.*\n/gm, '' );
+
+  }
+
+  if ( !variables.hasWorker ) {
+
+    await fs.rm ( path.join ( process.cwd (), 'src', 'background' ), { recursive: true } );
+
+    manifest.background = undefined;
+    viteTS = viteTS.replace ( /^\s*background:.*\n/gm, '' );
 
   }
 

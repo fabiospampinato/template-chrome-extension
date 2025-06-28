@@ -9,7 +9,7 @@
     "default_popup": "./src/popup/index.html"
   },
   "background": {
-    "page": "./src/background/index.html"
+    "service_worker": "./assets/background.js"
   },
   "chrome_url_overrides": {
     "newtab": "./src/newtab/index.html"

@@ -23,10 +23,6 @@
       "type": "boolean",
       "default": false
     },
-    "hasBackground": {
-      "type": "boolean",
-      "default": false
-    },
     "hasContent": {
       "type": "boolean",
       "default": false
@@ -48,6 +44,10 @@
       "default": false
     },
     "hasSidepanel": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasWorker": {
       "type": "boolean",
       "default": false
     }

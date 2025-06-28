@@ -12,6 +12,13 @@ const postinstall = async variables => {
   let manifest = JSON.parse ( manifestJSON );
   let viteTS = await fs.readFile ( path.join ( process.cwd (), 'vite.ts' ), 'utf8' );
 
+  if ( !variables.hasAction ) {
+
+    manifest.action.default_title = undefined;
+    manifest.action.default_icon = undefined;
+
+  }
+
   if ( !variables.hasBackground ) {
 
     await fs.rm ( path.join ( process.cwd (), 'src', 'background' ), { recursive: true } );
@@ -64,8 +71,14 @@ const postinstall = async variables => {
 
     await fs.rm ( path.join ( process.cwd (), 'src', 'popup' ), { recursive: true } );
 
-    manifest.action = undefined;
+    manifest.action.default_popup = undefined;
     viteTS = viteTS.replace ( /^\s*popup:.*\n/gm, '' );
+
+  }
+
+  if ( !variables.hasAction && !variables.hasPopup ) {
+
+    manifest.action = undefined;
 
   }
 

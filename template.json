@@ -19,6 +19,10 @@
     "owner": {
       "type": "string"
     },
+    "hasAction": {
+      "type": "boolean",
+      "default": false
+    },
     "hasBackground": {
       "type": "boolean",
       "default": false
